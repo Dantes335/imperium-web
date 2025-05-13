@@ -33,23 +33,31 @@
     </div>
   </header>
 
-  <!-- SLIDER -->
-  <section id="inicio" class="carousel-container w-full h-96">
-    <div id="carousel" class="carousel w-[500%]">
-      <img src="img1.jpg" class="w-full h-96 object-cover" alt="Imagen 1"/>
-      <img src="img2.jpg" class="w-full h-96 object-cover" alt="Imagen 2"/>
-      <img src="img3.jpg" class="w-full h-96 object-cover" alt="Imagen 3"/>
-      <img src="img4.jpg" class="w-full h-96 object-cover" alt="Imagen 4"/>
-      <img src="img5.jpg" class="w-full h-96 object-cover" alt="Imagen 5"/>
+  <!-- SLIDER ACTUALIZADO -->
+  <section id="inicio" class="carousel-container w-full h-96 relative overflow-hidden">
+    <div id="carousel" class="carousel h-96">
+      <img src="img1.jpg" class="w-full h-96 object-cover flex-shrink-0" alt="Imagen 1" />
+      <img src="img2.jpg" class="w-full h-96 object-cover flex-shrink-0" alt="Imagen 2" />
+      <img src="img3.jpg" class="w-full h-96 object-cover flex-shrink-0" alt="Imagen 3" />
+      <img src="img4.jpg" class="w-full h-96 object-cover flex-shrink-0" alt="Imagen 4" />
+      <img src="img5.jpg" class="w-full h-96 object-cover flex-shrink-0" alt="Imagen 5" />
     </div>
   </section>
 
   <script>
-    let index = 0;
     const slider = document.getElementById("carousel");
+    const slides = slider.children.length;
+    const slideWidth = 100 / slides;
+    let index = 0;
+
+    slider.style.width = `${slides * 100}%`;
+    Array.from(slider.children).forEach(child => {
+      child.style.width = `${100 / slides}%`;
+    });
+
     setInterval(() => {
-      index = (index + 1) % 5;
-      slider.style.transform = `translateX(-${index * 100}%)`;
+      index = (index + 1) % slides;
+      slider.style.transform = `translateX(-${index * slideWidth}%)`;
     }, 3000);
   </script>
 
@@ -97,9 +105,9 @@
     <div class="max-w-4xl mx-auto px-4 text-center">
       <h2 class="text-3xl font-semibold mb-8 text-[#002B5C]">Contáctanos</h2>
       <form class="space-y-4">
-        <input type="text" placeholder="Nombre" class="w-full p-3 border rounded-lg shadow-sm"/>
-        <input type="email" placeholder="Correo electrónico" class="w-full p-3 border rounded-lg shadow-sm"/>
-        <textarea placeholder="Mensaje" class="w-full p-3 border rounded-lg shadow-sm h-32"></textarea>
+        <input type="text" placeholder="Nombre" class="w-full p-3 border rounded-lg shadow-sm" required />
+        <input type="email" placeholder="Correo electrónico" class="w-full p-3 border rounded-lg shadow-sm" required />
+        <textarea placeholder="Mensaje" class="w-full p-3 border rounded-lg shadow-sm h-32" required></textarea>
         <button class="bg-[#0070BA] hover:bg-[#005999] text-white px-6 py-3 rounded-lg">Enviar</button>
       </form>
     </div>
