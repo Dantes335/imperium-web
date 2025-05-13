@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>IMPERIUM | Sistema de Control Escolar</title>
+  <title>IMPERIUM | Sistema Escolar</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
   <style>
     .carousel {
@@ -15,25 +15,26 @@
     }
   </style>
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="text-[#333333] font-sans" style="background-color: #F0E6D2;">
 
-  <!-- NAV -->
-  <header class="bg-blue-800 text-white p-4 sticky top-0 z-10">
+  <!-- HEADER -->
+  <header class="bg-[#002B5C] text-white p-4">
     <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">IMPERIUM</h1>
+      <h1 class="text-3xl font-bold">IMPERIUM</h1>
       <nav>
         <ul class="flex space-x-6">
-          <li><a href="#inicio" class="hover:text-gray-300">Inicio</a></li>
-          <li><a href="#nosotros" class="hover:text-gray-300">Nosotros</a></li>
-          <li><a href="#galeria" class="hover:text-gray-300">Galería</a></li>
-          <li><a href="#contacto" class="hover:text-gray-300">Contacto</a></li>
+          <li><a href="#inicio" class="hover:text-[#A4C6E6]">Inicio</a></li>
+          <li><a href="#nosotros" class="hover:text-[#A4C6E6]">Nosotros</a></li>
+          <li><a href="#galeria" class="hover:text-[#A4C6E6]">Galería</a></li>
+          <li><a href="#comentarios" class="hover:text-[#A4C6E6]">Comentarios</a></li>
+          <li><a href="#contacto" class="hover:text-[#A4C6E6]">Contacto</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <!-- SLIDER -->
-  <section id="inicio" class="carousel-container w-full h-96 relative">
+  <section id="inicio" class="carousel-container w-full h-96">
     <div id="carousel" class="carousel w-[500%]">
       <img src="img1.jpg" class="w-full h-96 object-cover" alt="Imagen 1"/>
       <img src="img2.jpg" class="w-full h-96 object-cover" alt="Imagen 2"/>
@@ -54,15 +55,15 @@
 
   <!-- NOSOTROS -->
   <section id="nosotros" class="py-16 bg-white text-center">
-    <h2 class="text-3xl font-semibold mb-6">¿Qué es IMPERIUM?</h2>
-    <p class="max-w-3xl mx-auto text-lg text-gray-700">
-      IMPERIUM es un sistema inteligente de control de acceso escolar que utiliza tarjetas con códigos QR para registrar asistencia, mejorar la seguridad y facilitar los procesos administrativos de las instituciones educativas.
+    <h2 class="text-3xl font-semibold mb-6 text-[#002B5C]">Sobre IMPERIUM</h2>
+    <p class="max-w-3xl mx-auto text-lg">
+      IMPERIUM es un sistema inteligente de control escolar que optimiza el acceso mediante identificaciones digitales, mejorando la seguridad y eficiencia en instituciones educativas.
     </p>
   </section>
 
-  <!-- GALERÍA -->
-  <section id="galeria" class="py-16 bg-gray-50 text-center">
-    <h2 class="text-3xl font-semibold mb-8">Galería</h2>
+  <!-- GALERIA -->
+  <section id="galeria" class="py-16 bg-[#F5F5F5] text-center">
+    <h2 class="text-3xl font-semibold mb-8 text-[#002B5C]">Galería</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto px-4">
       <img src="img1.jpg" alt="Imagen 1" class="rounded-lg shadow-lg h-48 object-cover">
       <img src="img2.jpg" alt="Imagen 2" class="rounded-lg shadow-lg h-48 object-cover">
@@ -72,39 +73,55 @@
     </div>
   </section>
 
+  <!-- COMENTARIOS -->
+  <section id="comentarios" class="py-16 bg-white text-center">
+    <h2 class="text-3xl font-semibold mb-8 text-[#002B5C]">Lo que dicen nuestros usuarios</h2>
+    <div class="max-w-4xl mx-auto px-4 space-y-6">
+      <div class="bg-[#F5F5F5] p-6 rounded-lg shadow-md">
+        <p class="text-lg font-semibold">Carlos G.</p>
+        <p class="italic">"IMPERIUM ha transformado la manera en que gestionamos los accesos en la institución. La seguridad y eficiencia han mejorado significativamente. ¡Es una herramienta indispensable!"</p>
+      </div>
+      <div class="bg-[#F5F5F5] p-6 rounded-lg shadow-md">
+        <p class="text-lg font-semibold">María P.</p>
+        <p class="italic">"Como docente, IMPERIUM ha facilitado la administración y control de los estudiantes. La plataforma es intuitiva y fácil de usar. ¡Altamente recomendada!"</p>
+      </div>
+      <div class="bg-[#F5F5F5] p-6 rounded-lg shadow-md">
+        <p class="text-lg font-semibold">Luis M.</p>
+        <p class="italic">"El sistema IMPERIUM ha optimizado los procesos de registro y acceso. Ahora, los estudiantes y el personal disfrutan de un acceso rápido y seguro a las instalaciones."</p>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACTO -->
   <section id="contacto" class="py-16 bg-white">
     <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-semibold mb-8">Contáctanos</h2>
+      <h2 class="text-3xl font-semibold mb-8 text-[#002B5C]">Contáctanos</h2>
       <form class="space-y-4">
-        <input type="text" placeholder="Nombre" class="w-full p-3 border rounded-lg shadow-sm" />
-        <input type="email" placeholder="Correo electrónico" class="w-full p-3 border rounded-lg shadow-sm" />
+        <input type="text" placeholder="Nombre" class="w-full p-3 border rounded-lg shadow-sm"/>
+        <input type="email" placeholder="Correo electrónico" class="w-full p-3 border rounded-lg shadow-sm"/>
         <textarea placeholder="Mensaje" class="w-full p-3 border rounded-lg shadow-sm h-32"></textarea>
-        <button class="bg-blue-800 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Enviar</button>
+        <button class="bg-[#0070BA] hover:bg-[#005999] text-white px-6 py-3 rounded-lg">Enviar</button>
       </form>
     </div>
   </section>
 
   <!-- MAPA -->
-  <section class="py-16 bg-gray-100">
+  <section class="py-16 bg-[#F5F5F5]">
     <div class="max-w-5xl mx-auto px-4">
-      <h2 class="text-3xl font-semibold text-center mb-6">Ubicación</h2>
+      <h2 class="text-3xl font-semibold text-center mb-6 text-[#002B5C]">Ubicación</h2>
       <div class="w-full h-96">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.762318765047!2d-74.08175438573686!3d4.609710343794614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99c2f524e3ff%3A0x4637302f7f1c12e1!2sBogot%C3%A1!5e0!3m2!1ses-419!2sco!4v1600000000000!5m2!1ses-419!2sco"
-          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-blue-800 text-white py-6 text-center">
+  <footer class="bg-[#002B5C] text-white py-6 text-center">
     <p>© 2025 IMPERIUM. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- BOTÓN WHATSAPP -->
-  <a href="https://wa.me/573001112233" target="_blank" class="fixed bottom-4 right-4 bg-green-500 p-4 rounded-full shadow-lg">
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/573001112233" target="_blank" class="fixed bottom-4 right-4 bg-[#25D366] p-4 rounded-full shadow-lg">
     <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" class="w-8 h-8">
   </a>
 
