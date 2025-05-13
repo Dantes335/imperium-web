@@ -1,47 +1,98 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>IMPERIUM</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMPERIUM - Control Escolar Inteligente</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .carousel-item {
+            transition: transform 1s ease;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-100">
 
-  <header class="bg-blue-700 text-white p-4 text-center text-2xl font-bold">
-    IMPERIUM - Sistema Inteligente de Control Escolar
-  </header>
+    <!-- Header -->
+    <header class="bg-blue-900 text-white py-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">IMPERIUM</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="hover:text-blue-300">Inicio</a></li>
+                    <li><a href="#acerca" class="hover:text-blue-300">Acerca de</a></li>
+                    <li><a href="#galeria" class="hover:text-blue-300">Galería</a></li>
+                    <li><a href="#contacto" class="hover:text-blue-300">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <main class="p-6 max-w-4xl mx-auto bg-white rounded shadow mt-6">
-    <h2 class="text-xl font-semibold mb-4">¿Qué es IMPERIUM?</h2>
-    <p class="mb-4">IMPERIUM es un sistema inteligente de control escolar basado en tarjetas de identificación con código QR. Mejora la seguridad, el acceso y la gestión administrativa en instituciones educativas.</p>
+    <!-- Carousel Slider -->
+    <section id="carousel" class="relative">
+        <div class="carousel-container overflow-hidden">
+            <div class="carousel-item w-full">
+                <img src="img1.jpg" alt="Imagen 1" class="w-full h-96 object-cover">
+            </div>
+            <div class="carousel-item w-full">
+                <img src="img2.jpg" alt="Imagen 2" class="w-full h-96 object-cover">
+            </div>
+        </div>
+        <!-- Controls -->
+        <button class="absolute top-1/2 left-4 transform -translate-y-1/2 text-white bg-blue-500 p-2 rounded-full">
+            &#60;
+        </button>
+        <button class="absolute top-1/2 right-4 transform -translate-y-1/2 text-white bg-blue-500 p-2 rounded-full">
+            &#62;
+        </button>
+    </section>
 
-    <div class="mb-6">
-      <h3 class="text-lg font-semibold mb-2">Galería</h3>
-      <div class="slider flex overflow-x-auto space-x-4">
-        <img src="img1.jpg" alt="Imagen 1" class="w-64 rounded shadow">
-        <img src="img2.jpg" alt="Imagen 2" class="w-64 rounded shadow">
-      </div>
-    </div>
+    <!-- About Section -->
+    <section id="acerca" class="py-16 bg-white text-gray-700">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-semibold text-center mb-8">¿Qué es IMPERIUM?</h2>
+            <p class="text-lg text-center">
+                IMPERIUM es un sistema inteligente que facilita el control y gestión de accesos, asistencia y otros aspectos administrativos a través de tarjetas de identificación con códigos QR. Mejorando la seguridad y eficiencia de las instituciones educativas.
+            </p>
+        </div>
+    </section>
 
-    <div class="mb-6">
-      <h3 class="text-lg font-semibold mb-2">Comentarios</h3>
-      <form class="space-y-2">
-        <input type="text" placeholder="Tu nombre" class="w-full border border-gray-300 p-2 rounded"/>
-        <textarea placeholder="Tu comentario" class="w-full border border-gray-300 p-2 rounded h-24"></textarea>
-        <button type="submit" class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800">Enviar</button>
-      </form>
-    </div>
-  </main>
+    <!-- Gallery Section -->
+    <section id="galeria" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-semibold mb-8">Galería</h2>
+            <div class="flex justify-center space-x-4">
+                <img src="img1.jpg" alt="Imagen 1" class="w-64 h-40 object-cover rounded shadow-lg">
+                <img src="img2.jpg" alt="Imagen 2" class="w-64 h-40 object-cover rounded shadow-lg">
+            </div>
+        </div>
+    </section>
 
-  <footer class="bg-blue-700 text-white text-center p-4 mt-6">
-    © 2025 IMPERIUM
-  </footer>
+    <!-- Contact Section -->
+    <section id="contacto" class="py-16 bg-white text-gray-700">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-semibold text-center mb-8">Contáctanos</h2>
+            <form class="max-w-xl mx-auto">
+                <div class="mb-4">
+                    <input type="text" placeholder="Tu nombre" class="w-full p-3 border border-gray-300 rounded shadow">
+                </div>
+                <div class="mb-4">
+                    <textarea placeholder="Tu mensaje" class="w-full p-3 border border-gray-300 rounded shadow h-40"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-700 text-white p-3 rounded hover:bg-blue-800">Enviar</button>
+            </form>
+        </div>
+    </section>
 
-  <a href="https://wa.me/573001112233" target="_blank" class="fixed bottom-4 right-4 bg-green-500 p-3 rounded-full shadow-lg">
-    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" class="w-6 h-6">
-  </a>
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-4 text-center">
+        <p>&copy; 2025 IMPERIUM | Todos los derechos reservados</p>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/573001112233" target="_blank" class="fixed bottom-4 right-4 bg-green-500 p-4 rounded-full shadow-lg">
+        <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" class="w-8 h-8">
+    </a>
 
 </body>
 </html>
